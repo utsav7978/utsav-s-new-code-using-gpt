@@ -13,7 +13,7 @@ def get_emotional_response(emotion, health_data=None):
         prompt += f" Additionally, their heart rate is {health_data['heart_rate']} bpm and their oxygen level is {health_data['oxygen_level']}%. Give some health advice."
 
     response = openai.Completion.create(
-        engine="text-davinci-003",  # You can use 'gpt-4' or any other available model
+        engine="gpt-4",  # You can use 'gpt-4' or any other available model
         prompt=prompt,
         max_tokens=150
     )
